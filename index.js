@@ -11,7 +11,7 @@ main().catch((err) => console.log(err));
 
 async function main() {
   await mongoose.connect(
-    "mongodb+srv://mithu10:7L0HUCLtOwmfO7nO@cluster0.vl3dn.mongodb.net/"
+    `mongodb+srv://mithu10:${process.env.DB_PASSWORD}@cluster0.vl3dn.mongodb.net/`
   );
   console.log("Database connected");
 }
